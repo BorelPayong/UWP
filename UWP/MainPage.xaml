@@ -1,0 +1,181 @@
+﻿<Page
+    x:Class="UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid  Background="Black">
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <ScrollViewer Grid.Column="0">
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+
+                </Grid.RowDefinitions>
+
+                <RelativePanel Grid.Row="0" 
+                               Margin="20, 0, 20, 0"
+                               BorderBrush="Black"
+                               BorderThickness="0, 0, 0, 3">
+
+                    <Image Name="AvatarHome" 
+                           Source="/Assets/unnamed.png"
+                           Width="140"
+                           RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+
+                    <TextBlock Name="TitleHome"
+                               Text="Universale"
+                               FontSize="30"
+                               FontWeight="Bold"
+                               RelativePanel.AlignHorizontalCenterWith="AvatarHome"
+                               RelativePanel.Below="AvatarHome"/>
+
+                    <TextBlock RelativePanel.Below="TitleHome"
+                               FontSize="28"
+                               RelativePanel.AlignHorizontalCenterWith="TitleHome"
+                               Text="Window Plateform"/>
+
+                </RelativePanel>
+
+                <RelativePanel Name="RPDashboard"
+                               Grid.Row="1"
+                               Margin="20"
+                               Padding="0, 10"
+                               CornerRadius="10">
+
+                    <Image Source="/Assets/images.png"
+                           Width="40"
+                           Name="imagedashboard"
+                           Margin="20, 0, 0, 0"
+                           />
+
+                    <TextBlock Name="TBDashboard"
+                               Text="Dashboard"
+                               RelativePanel.RightOf="imagedashboard"
+                               RelativePanel.AlignVerticalCenterWith="imagedashboard"
+                               FontSize="26"
+                               Margin="20, 0, 0, 0"/>
+
+                </RelativePanel>
+
+                <RelativePanel Name="RPUserProfile"
+                               Grid.Row="2"
+                               Margin="20"
+                               Padding="0, 10"
+                               CornerRadius="10">
+
+                    <Image Source="/Assets/user_male_60px.png"
+                           Width="40"
+                           Name="imageUserProfile"
+                           Margin="20, 0, 0, 0"
+                           />
+
+                    <TextBlock Name="TBUserProfile"
+                               Text="UserProfile"
+                               RelativePanel.RightOf="imageUserProfile"
+                               RelativePanel.AlignVerticalCenterWith="imageUserProfile"
+                               FontSize="26"
+                               Margin="20, 0, 0, 0"/>
+
+                </RelativePanel>
+
+                <RelativePanel Name="RPTable"
+                               Grid.Row="3"
+                               Margin="20"
+                               Padding="0, 10"
+                               CornerRadius="10">
+
+                    <Image Source="/Assets/table_240px.png"
+                           Width="40"
+                           Name="imageTable"
+                           Margin="20, 0, 0, 0"
+                           />
+
+                    <TextBlock Name="TBTable"
+                               Text="Table"
+                               RelativePanel.RightOf="imageTable"
+                               RelativePanel.AlignVerticalCenterWith="imageTable"
+                               FontSize="26"
+                               Margin="20, 0, 0, 0"/>
+
+                </RelativePanel>
+
+                <RelativePanel Name="RPSittings"
+                               Grid.Row="4"
+                               Margin="20"
+                               Padding="0, 10"
+                               CornerRadius="10">
+
+                    <Image Source="/Assets/settings_64px.png"
+                           Width="40"
+                           Name="imageSittings"
+                           Margin="20, 0, 0, 0"
+                           />
+
+                    <TextBlock Name="TBSittings"
+                               Text="Sittings"
+                               RelativePanel.RightOf="imageSittings"
+                               RelativePanel.AlignVerticalCenterWith="imageSittings"
+                               FontSize="26"
+                               Margin="20, 0, 0, 0"/>
+
+                </RelativePanel>
+
+                <RelativePanel Name="RPExits"
+                               Grid.Row="5"
+                               Margin="20"
+                               Padding="0, 10"
+                               CornerRadius="10"
+                               PointerPressed="RPExits_PointerPressed">
+
+                    <Image Source="/Assets/exit_48px.png"
+                           Width="40"
+                           Name="imageExits"
+                           Margin="20, 0, 0, 0"
+                           />
+
+                    <TextBlock Name="TBExits"
+                               Text="Exits"
+                               RelativePanel.RightOf="imageExits"
+                               RelativePanel.AlignVerticalCenterWith="imageExits"
+                               FontSize="26"
+                               Margin="20, 0, 0, 0"/>
+
+                </RelativePanel>
+
+            </Grid>
+
+        </ScrollViewer>
+
+        <Grid Grid.Column="1"
+              Margin="20">
+
+            <Frame Name="MyFrame">
+                
+                
+                
+            </Frame>
+
+        </Grid>
+
+    </Grid>
+</Page>
